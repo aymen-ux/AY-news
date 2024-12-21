@@ -1,0 +1,578 @@
+:root{
+  --font-family: 'Crimson Text', serif;
+  --background-color:linear-gradient(
+    to right,
+    hsla(12, 100%, 86%, 0.4),
+    rgba(255, 88, 88, 0.02),
+    hsla(300, 100%, 67%, 0.1)
+  );
+  --border-color:linear-gradient(
+    to right,
+    #800080,
+    /* purple */ #ff0000 /* blue */
+  ); /* Gradient for the bottom border */
+
+  --background-section:url(Images/f1.jpg);
+
+  --border-animation:linear-gradient(
+    to right,
+    #ff7e5f,
+    red,
+    rgb(200, 0, 200)
+  )
+}
+
+
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 0;
+  margin-top: 0.8%;
+  background-image:var(--background-color) ;
+  background-size: cover;
+}
+
+.reviews {
+  border-radius: 4px;
+  position: relative;
+}
+.reviews::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 168, 168, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.reviews:hover::after {
+  transform: scale(1.1);
+}
+
+.reviews:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
+
+.card-blog {
+  align-items: center;
+}
+
+.card-blog h6 {
+  font-size: 12px;
+}
+
+.latest1-4 {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.img1-4 {
+  max-height: 350px;
+}
+h1 span {
+  padding-bottom: 7px;
+  font-weight: 470;
+  display: inline-block; 
+  position: relative; 
+}
+
+h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ensures the border spans the width of the text */
+  height: 5px; /* Height of the bottom border */
+  background: var(--border-color);
+  border-radius: 5px;
+}
+.latest1-4 h4 {
+  margin: 0;
+  font-family:var(--font-family);
+}
+
+.read-more {
+  margin-bottom: 25px;
+}
+
+.news1-smimg {
+  max-height: 30px;
+  margin-top: 8px;
+}
+.news1-textsm {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.852);
+  font-weight: 500;
+  margin-left: 5px;
+  line-height: 1.2;
+}
+
+.news1-textsm span {
+  color: rgba(0, 0, 0, 0.614);
+  font-weight: 400;
+}
+
+.p2 {
+  font-weight: 400;
+  font-size: 27px;
+  font-family:var(--font-family);
+}
+
+.news2-3-1 {
+  width: 72%;
+}
+
+h5 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.small-date {
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-top: 24px;
+}
+
+.header-large {
+  max-height: 80px;
+  padding-bottom: 0;
+}
+.h1-1 {
+  text-shadow: 1.3px 1.3px 35px rgb(11, 11, 11);
+  animation-delay: 0.3s;
+  font-weight: 600;
+  color: #f8f8f8;
+}
+.p1 {
+  font-size: 20px;
+  animation-delay: 1.3s;
+  text-shadow: 2px 2px 35px rgb(11, 11, 11);
+  color: rgb(255, 252, 252);
+  font-weight: 500;
+}
+
+.p3 {
+  color: rgb(48, 48, 48);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+.p1-6 {
+  font-size: 14px;
+}
+
+.h2-overlay {
+  text-shadow: black 0.5px 0.5px 2px;
+}
+.p-overlay {
+  text-shadow: black 0.5px 0.5px 2px;
+  color: white;
+}
+
+.logo {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 35px;
+  color: rgb(56, 55, 57);
+}
+
+.latest {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.latest1 {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+.img {
+  border-radius: 15px;
+  float: right;
+}
+
+.u-img {
+  max-height: 160px;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.alert {
+  max-height: 33px;
+  padding: 6px 6px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.alert p {
+  font-size: 14px;
+}
+
+li,
+.right-p {
+  color: rgba(220, 220, 220, 0.863);
+}
+
+.footer-icon {
+  font-family: "Protest Strike", sans-serif;
+  color: azure;
+}
+
+footer {
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.648);
+  cursor: pointer;
+}
+
+.footer-container {
+  width: 99vw;
+}
+li h4 {
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.f-section {
+  background-image :var(--background-section);
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 90vh;
+}
+
+.top-button {
+  position: fixed;
+  top: 92%;
+  left: 96%;
+  color: aliceblue;
+  z-index: 999;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  display: none;
+  transition: 1s all linear;
+
+
+}
+
+
+
+
+
+.sp-bt-up {
+  margin-top: 5px;
+}
+.img1 {
+  padding-right: 17px;
+}
+
+.top-button:hover {
+  background-color: rgba(0, 0, 0, 0.756);
+  color: white;
+}
+
+.footer-container li span {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.footer-container li span::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px; /* Thickness of the border */
+  background:var(--border-animation) ; /* Gradient effect */
+  transition: width 0.3s ease; /* Animate the width of the border */
+  border-radius: 30px;
+}
+
+.footer-container li span:hover {
+  color: white;
+}
+
+.footer-container li span:hover::after {
+  width: 100%; /* Expand the border to full width on hover */
+}
+
+.header-large li a {
+  position: relative;
+
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.header-large li a::after {
+  content: "";
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 0;
+  height: 3px; /* Thickness of the border */
+  background: var(--border-animation); /* Gradient effect */
+  transition: width 0.3s ease; /* Animate the width of the border */
+  border-radius: 30px;
+}
+
+.header-large li a:hover::after {
+  width: 100%; /* Expand the border to full width on hover */
+}
+
+.logo-small {
+  font-size: 150%;
+}
+
+.review-card {
+  padding-top: 20px;
+}
+
+.review-card img {
+  border-radius: 5px;
+}
+
+.coming h4 {
+  color: azure;
+  text-shadow: black 0.5px 0.5px 2px;
+}
+.modal-b {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.53);
+  border: none;
+}
+.modal-b:hover {
+  background-color: black;
+  color: white;
+}
+
+.blog1 {
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  padding-bottom: 5px;
+}
+
+.news2-btn {
+  border: 0.5px solid transparent; /* Start with transparent border */
+  background-color: white; /* White background initially */
+  color: transparent; /* Make the text transparent so the gradient shows */
+  background-image: linear-gradient(
+    to right,
+    #ff7e5f,
+    red,
+    purple
+  ); /* Gradient for text */
+  background-clip: text; /* Clip the background gradient to the text */
+  -webkit-background-clip: text; /* Safari support for background-clip: text */
+  border-image: linear-gradient(to right, #ff7e5f, red, purple) 1; /* Gradient for the border */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-image 0.5s ease, color 0.5s ease,
+    background-color 0.5s ease; /* Smooth transitions for all states */
+  display: inline-block;
+  transition: background-image 0.5s ease, color 0.5s ease,
+    background-color 0.5s ease, border-image 0.5s ease; /* Smooth transitions */
+}
+
+.news2-btn:hover {
+  background-image: linear-gradient(to right, purple, red, #ff7e5f) 1;
+  border-image: linear-gradient(45deg, purple, red, #ff7e5f) 1; /* Transition the border gradient */
+}
+
+.news1-4 {
+  width: 27%;
+}
+
+.h3-blog {
+  font-weight: 500;
+}
+
+h6 span {
+  font-weight: 600;
+}
+
+hr{
+    margin-block: 10px;
+}
+
+
+
+/*Responsive*/
+
+@media (min-width: 640px) and (max-width: 905px) {
+  .p2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .br2{
+    display: none;
+  }
+
+  .logo{
+    margin-bottom: 5px;
+  }
+
+  .news2-3-2 {
+    margin-bottom: 20px;
+  }
+  .news2-3-2 h2 {
+    font-size: 20px;
+  }
+  .latest1-4 .title h4{
+    font-size: 10px;
+  }
+
+  .news1-4 h6 {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .news1-4 .uk-overlay {
+    height: 10px;
+  }
+
+  .blog1 h3 {
+    font-size: 12px;
+  }
+  .blog1 h5 {
+    font-size: 10px;
+  }
+
+
+  .blog1 .card-blog {
+    height: 50px;
+  }
+  .blog1 .card-blog img {
+    display: none;
+  }
+  .blog1 .card-blog h6 {
+    font-size: 10px;
+  }
+  .read-more {
+   bottom: -5%;
+  }
+
+  .logo-small{
+    margin-bottom: 5px;
+  }
+  .read-more a{
+    font-size: 10px;
+
+  }
+
+  .blog1 hr {
+    margin: 5px;
+  }
+}
+
+.animated{
+  opacity: 0;
+ transform: translateY(50px)  ;
+ }
+
+
+   .fade{
+   opacity: 1;
+   transform: translateY(0px)  ;
+   transition: 0.8s opacity linear ,  0.4s transform linear;
+
+   }
+
+
+
+
+
+@media (min-width: 640px) {
+  .blog1 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width:1200px){
+  .news1-4-1-1{
+margin-top: -35px;
+}
+}
+@media (max-width: 640px) {
+  .news1-4 {
+    width: 100%;
+  }
+  .news1-4-1-1{
+    margin-top: 5px;
+  }
+
+  .latest1-4 {
+    width: 90%;
+    justify-self: center;
+  }
+
+  .latest1-4 img {
+    min-width: 100%;
+    max-height: 100%;
+  }
+
+  .space-o {
+    max-height: 110%;
+  }
+  .p-overlay {
+    display: none;
+  }
+
+  .top-button{
+    top: 92%;
+    left: 89%;
+  }
+
+  .p2{
+margin-bottom: 60px;
+margin-right: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .h2-overlay {
+    font-size: 16px;
+  }
+  .p2-overlay {
+    font-size: 8px;
+  }
+}
+
+
+
+@media (min-width:1200px){
+  .img1-4{
+    width: 100%;
+    max-height: 110%;
+  }
+
+  .categeories{
+    margin: 0px 10px;
+  }
+
+  .uk-slider-items{
+    width: 70%;
+  }
+}
